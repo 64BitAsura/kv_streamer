@@ -20,7 +20,7 @@ impl HttpServer for kv_streamerActor {
             ("GET", ["api", "counter"]) => get_counter(ctx, "default").await,
             ("GET", ["api", "counter", counter]) => get_counter(ctx, counter).await,
             ("POST", ["api", "counter"]) => increment_counter(ctx, "default", 1).await,
-            ("POST", ["api", "counter", counter]) => increment_counter(ctx, counter, 3).await,
+            ("POST", ["api", "counter", counter]) => increment_counter(ctx, counter, 1).await,
             // Any other GET request is interpreted as a static asset request for the UI
             ("GET", asset_path) => get_asset(asset_path.join("/")),
             (_, _) => Ok(HttpResponse::not_found()),
