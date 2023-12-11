@@ -11,14 +11,14 @@ kind: Application
 metadata:
   name: kv_streamer
   annotations:
-    version: v0.0.2
+    version: v0.3.0
     description: "wasmCloud Key Value Counter Example"
 spec:
   components:
     - name: kvcounter
       type: actor
       properties:
-        image: registry.cosmonic.sh/bea6ed9a-c2e9-4dc6-9aaf-70d9c0bf1771/kv_streamer:0.2.0
+        image: registry.cosmonic.sh/bea6ed9a-c2e9-4dc6-9aaf-70d9c0bf1771/kv_streamer:0.3.0
       traits:
         - type: spreadscaler
           properties:

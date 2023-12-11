@@ -28,12 +28,12 @@ impl HttpServer for kv_streamerActor {
     }
 }
 
-/// Increment the `key` in the KeyValue store by `value`
+/// get the `key` in the KeyValue store 
 async fn get_counter(ctx: &Context, counter: &str) -> RpcResult<HttpResponse> {
     // make friendlier key
     let key = format!("counter:{}", counter.replace('/', ":"));
 
-    // increment the value in kv and format response as json
+    // get the value in kv and format response as json
     let (body, status_code) = match KeyValueSender::new()
         .get(ctx, &key)
         .await
