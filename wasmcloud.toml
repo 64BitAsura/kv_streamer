@@ -1,0 +1,8 @@
+name = "kv_streamer"
+language = "rust"
+type = "actor"
+version = "0.2.0"
+
+[actor]
+wasm_target = "wasm32-unknown-unknown"
+claims = ["wasmcloud:httpserver", "wasmcloud:keyvalue"]
